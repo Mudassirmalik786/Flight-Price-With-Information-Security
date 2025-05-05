@@ -1,0 +1,440 @@
+2025-05-01 02:49:18,858 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.114:5000
+2025-05-01 02:49:18,858 INFO:[33mPress CTRL+C to quit[0m
+2025-05-01 02:51:12,453 INFO:127.0.0.1 - - [01/May/2025 02:51:12] "GET / HTTP/1.1" 200 -
+2025-05-01 02:51:13,214 INFO:127.0.0.1 - - [01/May/2025 02:51:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-01 02:51:13,352 INFO:127.0.0.1 - - [01/May/2025 02:51:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-01 02:51:48,738 WARNING:Unauthorized access attempt.
+2025-05-01 02:51:48,744 ERROR:Exception on /predict [POST]
+Traceback (most recent call last):
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\flask_cors\decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\security.py", line 22, in decorated_function
+    return render_template("unauthorized.html"), 403
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\flask\templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\flask\templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: unauthorized.html
+2025-05-01 02:51:49,035 INFO:127.0.0.1 - - [01/May/2025 02:51:49] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-05-01 02:52:11,229 WARNING:Unauthorized access attempt.
+2025-05-01 02:52:11,229 ERROR:Exception on /predict [POST]
+Traceback (most recent call last):
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\flask_cors\decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\security.py", line 22, in decorated_function
+    return render_template("unauthorized.html"), 403
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\flask\templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\flask\templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+  File "D:\Information_Security\Flight2-3_9\flight-price-prediction\venv\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: unauthorized.html
+2025-05-01 02:52:11,235 INFO:127.0.0.1 - - [01/May/2025 02:52:11] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-05-01 02:54:51,023 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-01 02:54:51,023 INFO:[33mPress CTRL+C to quit[0m
+2025-05-01 02:54:51,023 INFO: * Restarting with stat
+2025-05-01 02:54:55,735 WARNING: * Debugger is active!
+2025-05-01 02:54:55,755 INFO: * Debugger PIN: 312-744-299
+2025-05-01 02:55:04,976 INFO:127.0.0.1 - - [01/May/2025 02:55:04] "GET / HTTP/1.1" 200 -
+2025-05-01 02:55:05,903 INFO:127.0.0.1 - - [01/May/2025 02:55:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-01 02:55:07,832 INFO:127.0.0.1 - - [01/May/2025 02:55:07] "GET / HTTP/1.1" 200 -
+2025-05-01 02:55:07,869 INFO:127.0.0.1 - - [01/May/2025 02:55:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-01 02:55:09,077 INFO:127.0.0.1 - - [01/May/2025 02:55:09] "GET / HTTP/1.1" 200 -
+2025-05-01 02:55:09,118 INFO:127.0.0.1 - - [01/May/2025 02:55:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-01 02:55:52,166 WARNING:Unauthorized access attempt.
+2025-05-01 02:55:52,207 INFO:127.0.0.1 - - [01/May/2025 02:55:52] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-05-01 02:55:52,437 INFO:127.0.0.1 - - [01/May/2025 02:55:52] "GET /predict?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-01 02:55:52,523 INFO:127.0.0.1 - - [01/May/2025 02:55:52] "GET /predict?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-01 02:55:52,910 INFO:127.0.0.1 - - [01/May/2025 02:55:52] "GET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-01 02:55:52,982 INFO:127.0.0.1 - - [01/May/2025 02:55:52] "[36mGET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-01 02:59:22,139 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-01 02:59:22,139 INFO:[33mPress CTRL+C to quit[0m
+2025-05-01 02:59:22,147 INFO: * Restarting with stat
+2025-05-01 02:59:25,983 WARNING: * Debugger is active!
+2025-05-01 02:59:25,994 INFO: * Debugger PIN: 312-744-299
+2025-05-01 02:59:33,980 WARNING:Unauthorized access attempt.
+2025-05-01 02:59:34,047 INFO:127.0.0.1 - - [01/May/2025 02:59:34] "[31m[1mPOST /predict HTTP/1.1[0m" 403 -
+2025-05-01 02:59:36,261 INFO:127.0.0.1 - - [01/May/2025 02:59:36] "GET / HTTP/1.1" 200 -
+2025-05-01 02:59:37,304 INFO:127.0.0.1 - - [01/May/2025 02:59:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-01 02:59:57,677 WARNING:Unauthorized access attempt.
+2025-05-01 02:59:57,679 INFO:127.0.0.1 - - [01/May/2025 02:59:57] "[31m[1mPOST /predict HTTP/1.1[0m" 403 -
+2025-05-02 19:33:59,575 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-02 19:33:59,575 INFO:[33mPress CTRL+C to quit[0m
+2025-05-02 19:33:59,589 INFO: * Restarting with stat
+2025-05-02 19:34:03,279 WARNING: * Debugger is active!
+2025-05-02 19:34:03,289 INFO: * Debugger PIN: 312-744-299
+2025-05-02 19:34:52,781 INFO:127.0.0.1 - - [02/May/2025 19:34:52] "GET / HTTP/1.1" 200 -
+2025-05-02 19:34:53,870 INFO:127.0.0.1 - - [02/May/2025 19:34:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-02 19:34:54,082 INFO:127.0.0.1 - - [02/May/2025 19:34:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-02 19:35:45,928 WARNING:Unauthorized access attempt.
+2025-05-02 19:35:45,935 INFO:127.0.0.1 - - [02/May/2025 19:35:45] "[31m[1mPOST /predict HTTP/1.1[0m" 403 -
+2025-05-03 01:28:34,703 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-03 01:28:34,703 INFO:[33mPress CTRL+C to quit[0m
+2025-05-03 01:28:34,706 INFO: * Restarting with stat
+2025-05-03 01:28:38,435 WARNING: * Debugger is active!
+2025-05-03 01:28:38,444 INFO: * Debugger PIN: 312-744-299
+2025-05-03 01:28:43,520 INFO:127.0.0.1 - - [03/May/2025 01:28:43] "GET / HTTP/1.1" 200 -
+2025-05-03 01:28:44,660 INFO:127.0.0.1 - - [03/May/2025 01:28:44] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-05-03 01:28:44,844 INFO:127.0.0.1 - - [03/May/2025 01:28:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-03 01:29:17,777 WARNING:Unauthorized access attempt.
+2025-05-03 01:29:18,266 INFO:127.0.0.1 - - [03/May/2025 01:29:18] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-05-03 01:29:18,428 INFO:127.0.0.1 - - [03/May/2025 01:29:18] "[36mGET /predict?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-03 01:29:18,468 INFO:127.0.0.1 - - [03/May/2025 01:29:18] "[36mGET /predict?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-03 01:29:18,638 INFO:127.0.0.1 - - [03/May/2025 01:29:18] "[36mGET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-03 01:29:18,703 INFO:127.0.0.1 - - [03/May/2025 01:29:18] "[36mGET /predict?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-03 01:31:26,509 WARNING:Unauthorized access attempt.
+2025-05-03 01:31:26,595 INFO:127.0.0.1 - - [03/May/2025 01:31:26] "[31m[1mPOST /predict HTTP/1.1[0m" 403 -
+2025-05-03 01:31:26,703 INFO:127.0.0.1 - - [03/May/2025 01:31:26] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2025-05-03 01:31:28,617 INFO:127.0.0.1 - - [03/May/2025 01:31:28] "GET / HTTP/1.1" 200 -
+2025-05-03 01:31:28,716 INFO:127.0.0.1 - - [03/May/2025 01:31:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 01:31:49,057 WARNING:Unauthorized access attempt.
+2025-05-03 01:31:49,061 INFO:127.0.0.1 - - [03/May/2025 01:31:49] "[31m[1mPOST /predict HTTP/1.1[0m" 403 -
+2025-05-03 01:31:49,157 INFO:127.0.0.1 - - [03/May/2025 01:31:49] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2025-05-03 01:31:51,253 INFO:127.0.0.1 - - [03/May/2025 01:31:51] "GET / HTTP/1.1" 200 -
+2025-05-03 01:31:51,289 INFO:127.0.0.1 - - [03/May/2025 01:31:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 01:35:00,545 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-03 01:35:00,545 INFO:[33mPress CTRL+C to quit[0m
+2025-05-03 01:35:00,550 INFO: * Restarting with stat
+2025-05-03 01:35:04,266 WARNING: * Debugger is active!
+2025-05-03 01:35:04,273 INFO: * Debugger PIN: 312-744-299
+2025-05-03 01:35:09,441 INFO:127.0.0.1 - - [03/May/2025 01:35:09] "GET / HTTP/1.1" 200 -
+2025-05-03 01:35:10,283 INFO:127.0.0.1 - - [03/May/2025 01:35:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 01:35:30,690 WARNING:Unauthorized access attempt.
+2025-05-03 01:35:30,772 INFO:127.0.0.1 - - [03/May/2025 01:35:30] "[31m[1mPOST /predict HTTP/1.1[0m" 403 -
+2025-05-03 01:35:30,886 INFO:127.0.0.1 - - [03/May/2025 01:35:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 01:35:38,540 INFO:127.0.0.1 - - [03/May/2025 01:35:38] "GET / HTTP/1.1" 200 -
+2025-05-03 01:35:38,620 INFO:127.0.0.1 - - [03/May/2025 01:35:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 16:00:00,768 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-03 16:00:00,768 INFO:[33mPress CTRL+C to quit[0m
+2025-05-03 16:00:00,773 INFO: * Restarting with stat
+2025-05-03 16:00:06,677 WARNING: * Debugger is active!
+2025-05-03 16:00:06,689 INFO: * Debugger PIN: 312-744-299
+2025-05-03 16:00:29,786 INFO:127.0.0.1 - - [03/May/2025 16:00:29] "GET / HTTP/1.1" 200 -
+2025-05-03 16:00:30,930 INFO:127.0.0.1 - - [03/May/2025 16:00:30] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-05-03 16:00:37,653 INFO:127.0.0.1 - - [03/May/2025 16:00:37] "[31m[1mGET /register HTTP/1.1[0m" 405 -
+2025-05-03 16:00:50,005 INFO:127.0.0.1 - - [03/May/2025 16:00:50] "GET /login HTTP/1.1" 200 -
+2025-05-03 16:00:50,063 INFO:127.0.0.1 - - [03/May/2025 16:00:50] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2025-05-03 16:00:57,472 INFO:127.0.0.1 - - [03/May/2025 16:00:57] "[31m[1mGET /register HTTP/1.1[0m" 405 -
+2025-05-03 16:01:38,633 INFO:127.0.0.1 - - [03/May/2025 16:01:38] "GET /login HTTP/1.1" 200 -
+2025-05-03 16:01:38,676 INFO:127.0.0.1 - - [03/May/2025 16:01:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 16:01:43,714 INFO:127.0.0.1 - - [03/May/2025 16:01:43] "[31m[1mGET /register HTTP/1.1[0m" 405 -
+2025-05-03 16:06:34,561 INFO: * Detected change in 'D:\\Information_Security\\Flight2-3_9\\flight-price-prediction\\app.py', reloading
+2025-05-03 16:06:34,974 INFO: * Restarting with stat
+2025-05-03 16:06:41,687 WARNING: * Debugger is active!
+2025-05-03 16:06:41,691 INFO: * Debugger PIN: 312-744-299
+2025-05-03 16:14:12,207 INFO:127.0.0.1 - - [03/May/2025 16:14:12] "GET /register HTTP/1.1" 200 -
+2025-05-03 16:14:12,312 INFO:127.0.0.1 - - [03/May/2025 16:14:12] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2025-05-03 16:14:37,448 INFO:127.0.0.1 - - [03/May/2025 16:14:37] "GET /register HTTP/1.1" 200 -
+2025-05-03 16:14:38,230 INFO:127.0.0.1 - - [03/May/2025 16:14:38] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-05-03 16:14:42,525 INFO:127.0.0.1 - - [03/May/2025 16:14:42] "GET /login HTTP/1.1" 200 -
+2025-05-03 16:14:42,619 INFO:127.0.0.1 - - [03/May/2025 16:14:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 16:14:45,277 INFO:127.0.0.1 - - [03/May/2025 16:14:45] "GET /register HTTP/1.1" 200 -
+2025-05-03 16:14:45,371 INFO:127.0.0.1 - - [03/May/2025 16:14:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 16:14:57,400 INFO:127.0.0.1 - - [03/May/2025 16:14:57] "GET /login HTTP/1.1" 200 -
+2025-05-03 16:14:57,499 INFO:127.0.0.1 - - [03/May/2025 16:14:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 16:14:59,160 INFO:127.0.0.1 - - [03/May/2025 16:14:59] "GET /register HTTP/1.1" 200 -
+2025-05-03 16:14:59,269 INFO:127.0.0.1 - - [03/May/2025 16:14:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 16:16:01,835 INFO:127.0.0.1 - - [03/May/2025 16:16:01] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+2025-05-03 16:22:05,103 INFO:127.0.0.1 - - [03/May/2025 16:22:05] "GET /login HTTP/1.1" 200 -
+2025-05-03 16:22:05,174 INFO:127.0.0.1 - - [03/May/2025 16:22:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 16:22:17,970 INFO:127.0.0.1 - - [03/May/2025 16:22:17] "POST /login HTTP/1.1" 200 -
+2025-05-03 16:22:40,105 INFO:127.0.0.1 - - [03/May/2025 16:22:40] "GET /login HTTP/1.1" 200 -
+2025-05-03 16:22:40,206 INFO:127.0.0.1 - - [03/May/2025 16:22:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 16:22:47,970 INFO:127.0.0.1 - - [03/May/2025 16:22:47] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2025-05-03 22:53:09,273 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-03 22:53:09,274 INFO:[33mPress CTRL+C to quit[0m
+2025-05-03 22:53:09,279 INFO: * Restarting with stat
+2025-05-03 22:53:14,552 WARNING: * Debugger is active!
+2025-05-03 22:53:14,567 INFO: * Debugger PIN: 312-744-299
+2025-05-03 22:53:23,966 INFO:127.0.0.1 - - [03/May/2025 22:53:23] "GET /login HTTP/1.1" 200 -
+2025-05-03 22:53:24,666 INFO:127.0.0.1 - - [03/May/2025 22:53:24] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-05-03 22:53:30,099 INFO:127.0.0.1 - - [03/May/2025 22:53:30] "GET /register HTTP/1.1" 200 -
+2025-05-03 22:53:30,355 INFO:127.0.0.1 - - [03/May/2025 22:53:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 22:53:30,578 INFO:127.0.0.1 - - [03/May/2025 22:53:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-03 22:53:35,492 INFO:127.0.0.1 - - [03/May/2025 22:53:35] "GET /login HTTP/1.1" 200 -
+2025-05-03 22:53:35,565 INFO:127.0.0.1 - - [03/May/2025 22:53:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 22:53:48,957 INFO:127.0.0.1 - - [03/May/2025 22:53:48] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-03 22:53:48,969 INFO:127.0.0.1 - - [03/May/2025 22:53:48] "GET /login HTTP/1.1" 200 -
+2025-05-03 22:53:49,025 INFO:127.0.0.1 - - [03/May/2025 22:53:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 22:54:06,446 INFO:127.0.0.1 - - [03/May/2025 22:54:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-03 22:54:06,457 INFO:127.0.0.1 - - [03/May/2025 22:54:06] "GET /login HTTP/1.1" 200 -
+2025-05-03 22:54:06,520 INFO:127.0.0.1 - - [03/May/2025 22:54:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 22:54:12,277 INFO:127.0.0.1 - - [03/May/2025 22:54:12] "GET /register HTTP/1.1" 200 -
+2025-05-03 22:54:12,339 INFO:127.0.0.1 - - [03/May/2025 22:54:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 22:54:22,687 INFO:127.0.0.1 - - [03/May/2025 22:54:22] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-03 22:54:22,696 INFO:127.0.0.1 - - [03/May/2025 22:54:22] "GET /register HTTP/1.1" 200 -
+2025-05-03 22:54:22,769 INFO:127.0.0.1 - - [03/May/2025 22:54:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 22:58:49,031 INFO:127.0.0.1 - - [03/May/2025 22:58:49] "GET /register HTTP/1.1" 200 -
+2025-05-03 22:58:49,092 INFO:127.0.0.1 - - [03/May/2025 22:58:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 23:13:47,284 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-03 23:13:47,286 INFO:[33mPress CTRL+C to quit[0m
+2025-05-03 23:13:47,287 INFO: * Restarting with stat
+2025-05-03 23:13:55,117 WARNING: * Debugger is active!
+2025-05-03 23:13:55,124 INFO: * Debugger PIN: 312-744-299
+2025-05-03 23:18:18,377 INFO: * Detected change in 'D:\\Information_Security\\Flight2-3_9\\flight-price-prediction\\reset_db.py', reloading
+2025-05-03 23:18:18,844 INFO: * Restarting with stat
+2025-05-03 23:18:32,645 WARNING: * Debugger is active!
+2025-05-03 23:18:32,650 INFO: * Debugger PIN: 312-744-299
+2025-05-03 23:19:25,086 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-03 23:19:25,088 INFO:[33mPress CTRL+C to quit[0m
+2025-05-03 23:19:25,098 INFO: * Restarting with stat
+2025-05-03 23:19:32,161 WARNING: * Debugger is active!
+2025-05-03 23:19:32,169 INFO: * Debugger PIN: 312-744-299
+2025-05-03 23:19:43,179 INFO:127.0.0.1 - - [03/May/2025 23:19:43] "GET /register HTTP/1.1" 200 -
+2025-05-03 23:19:44,400 INFO:127.0.0.1 - - [03/May/2025 23:19:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 23:20:00,146 INFO:127.0.0.1 - - [03/May/2025 23:20:00] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-03 23:20:00,159 INFO:127.0.0.1 - - [03/May/2025 23:20:00] "GET /register HTTP/1.1" 200 -
+2025-05-03 23:20:00,226 INFO:127.0.0.1 - - [03/May/2025 23:20:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 23:48:16,254 INFO:127.0.0.1 - - [03/May/2025 23:48:16] "GET /register HTTP/1.1" 200 -
+2025-05-03 23:48:16,367 INFO:127.0.0.1 - - [03/May/2025 23:48:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 23:48:28,713 INFO:127.0.0.1 - - [03/May/2025 23:48:28] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-03 23:48:28,725 INFO:127.0.0.1 - - [03/May/2025 23:48:28] "GET /register HTTP/1.1" 200 -
+2025-05-03 23:48:28,802 INFO:127.0.0.1 - - [03/May/2025 23:48:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 23:48:32,733 INFO:127.0.0.1 - - [03/May/2025 23:48:32] "GET /register HTTP/1.1" 200 -
+2025-05-03 23:48:32,835 INFO:127.0.0.1 - - [03/May/2025 23:48:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 23:48:33,469 INFO:127.0.0.1 - - [03/May/2025 23:48:33] "GET /register HTTP/1.1" 200 -
+2025-05-03 23:48:33,544 INFO:127.0.0.1 - - [03/May/2025 23:48:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 23:48:33,758 INFO:127.0.0.1 - - [03/May/2025 23:48:33] "GET /register HTTP/1.1" 200 -
+2025-05-03 23:48:33,836 INFO:127.0.0.1 - - [03/May/2025 23:48:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 23:48:34,045 INFO:127.0.0.1 - - [03/May/2025 23:48:34] "GET /register HTTP/1.1" 200 -
+2025-05-03 23:48:34,111 INFO:127.0.0.1 - - [03/May/2025 23:48:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-03 23:48:50,356 INFO:127.0.0.1 - - [03/May/2025 23:48:50] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-03 23:48:50,372 INFO:127.0.0.1 - - [03/May/2025 23:48:50] "GET /register HTTP/1.1" 200 -
+2025-05-03 23:48:50,426 INFO:127.0.0.1 - - [03/May/2025 23:48:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 00:06:26,689 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-04 00:06:26,691 INFO:[33mPress CTRL+C to quit[0m
+2025-05-04 00:06:26,698 INFO: * Restarting with stat
+2025-05-04 00:06:32,498 WARNING: * Debugger is active!
+2025-05-04 00:06:32,506 INFO: * Debugger PIN: 312-744-299
+2025-05-04 00:09:29,897 INFO:127.0.0.1 - - [04/May/2025 00:09:29] "GET /register HTTP/1.1" 200 -
+2025-05-04 00:09:30,643 INFO:127.0.0.1 - - [04/May/2025 00:09:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 00:09:32,916 INFO:127.0.0.1 - - [04/May/2025 00:09:32] "GET /register HTTP/1.1" 200 -
+2025-05-04 00:09:32,948 INFO:127.0.0.1 - - [04/May/2025 00:09:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 00:09:36,709 INFO:127.0.0.1 - - [04/May/2025 00:09:36] "GET /login HTTP/1.1" 200 -
+2025-05-04 00:09:36,741 INFO:127.0.0.1 - - [04/May/2025 00:09:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 00:09:41,324 INFO:127.0.0.1 - - [04/May/2025 00:09:41] "GET /register HTTP/1.1" 200 -
+2025-05-04 00:09:41,426 INFO:127.0.0.1 - - [04/May/2025 00:09:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 00:09:52,000 INFO:127.0.0.1 - - [04/May/2025 00:09:52] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-04 00:09:52,016 INFO:127.0.0.1 - - [04/May/2025 00:09:52] "GET /register HTTP/1.1" 200 -
+2025-05-04 00:09:52,101 INFO:127.0.0.1 - - [04/May/2025 00:09:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 00:09:56,134 INFO:127.0.0.1 - - [04/May/2025 00:09:56] "GET /login HTTP/1.1" 200 -
+2025-05-04 00:09:56,241 INFO:127.0.0.1 - - [04/May/2025 00:09:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 00:10:05,636 INFO:127.0.0.1 - - [04/May/2025 00:10:05] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-04 00:10:05,650 INFO:127.0.0.1 - - [04/May/2025 00:10:05] "GET /login HTTP/1.1" 200 -
+2025-05-04 00:10:05,693 INFO:127.0.0.1 - - [04/May/2025 00:10:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 00:10:13,511 INFO:127.0.0.1 - - [04/May/2025 00:10:13] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-04 00:10:13,518 INFO:127.0.0.1 - - [04/May/2025 00:10:13] "GET /login HTTP/1.1" 200 -
+2025-05-04 00:10:13,563 INFO:127.0.0.1 - - [04/May/2025 00:10:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 00:42:17,759 INFO: * Detected change in 'D:\\Information_Security\\Flight2-3_9\\flight-price-prediction\\app.py', reloading
+2025-05-04 00:42:18,067 INFO: * Restarting with stat
+2025-05-04 00:42:21,098 WARNING: * Debugger is active!
+2025-05-04 00:42:21,103 INFO: * Debugger PIN: 312-744-299
+2025-05-04 00:43:07,221 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-04 00:43:07,221 INFO:[33mPress CTRL+C to quit[0m
+2025-05-04 00:43:07,223 INFO: * Restarting with stat
+2025-05-04 00:43:09,976 WARNING: * Debugger is active!
+2025-05-04 00:43:09,979 INFO: * Debugger PIN: 312-744-299
+2025-05-04 00:43:19,111 INFO:127.0.0.1 - - [04/May/2025 00:43:19] "GET /login HTTP/1.1" 200 -
+2025-05-04 00:43:19,373 INFO:127.0.0.1 - - [04/May/2025 00:43:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 00:43:36,755 INFO:127.0.0.1 - - [04/May/2025 00:43:36] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-04 00:43:36,755 INFO:127.0.0.1 - - [04/May/2025 00:43:36] "GET /register HTTP/1.1" 200 -
+2025-05-04 00:43:36,786 INFO:127.0.0.1 - - [04/May/2025 00:43:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 00:43:43,647 INFO:127.0.0.1 - - [04/May/2025 00:43:43] "GET /login HTTP/1.1" 200 -
+2025-05-04 00:43:43,688 INFO:127.0.0.1 - - [04/May/2025 00:43:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 00:43:53,178 INFO:127.0.0.1 - - [04/May/2025 00:43:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-04 00:43:53,187 INFO:127.0.0.1 - - [04/May/2025 00:43:53] "GET /login HTTP/1.1" 200 -
+2025-05-04 00:43:53,214 INFO:127.0.0.1 - - [04/May/2025 00:43:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 00:46:33,652 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-04 00:46:33,652 INFO:[33mPress CTRL+C to quit[0m
+2025-05-04 00:46:33,654 INFO: * Restarting with stat
+2025-05-04 00:46:36,198 WARNING: * Debugger is active!
+2025-05-04 00:46:36,201 INFO: * Debugger PIN: 312-744-299
+2025-05-04 00:47:05,897 INFO:127.0.0.1 - - [04/May/2025 00:47:05] "GET /register HTTP/1.1" 200 -
+2025-05-04 00:47:20,782 INFO:127.0.0.1 - - [04/May/2025 00:47:20] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-04 00:47:20,797 INFO:127.0.0.1 - - [04/May/2025 00:47:20] "GET /register HTTP/1.1" 200 -
+2025-05-04 00:51:23,806 INFO: * Detected change in 'D:\\Information_Security\\Flight2-3_9\\flight-price-prediction\\show_users.py', reloading
+2025-05-04 00:51:24,061 INFO: * Restarting with stat
+2025-05-04 00:51:26,860 WARNING: * Debugger is active!
+2025-05-04 00:51:26,872 INFO: * Debugger PIN: 312-744-299
+2025-05-04 00:51:28,122 INFO: * Detected change in 'D:\\Information_Security\\Flight2-3_9\\flight-price-prediction\\show_users.py', reloading
+2025-05-04 00:51:28,365 INFO: * Restarting with stat
+2025-05-04 00:51:30,766 WARNING: * Debugger is active!
+2025-05-04 00:51:30,771 INFO: * Debugger PIN: 312-744-299
+2025-05-04 00:51:48,433 INFO: * Detected change in 'D:\\Information_Security\\Flight2-3_9\\flight-price-prediction\\show_users.py', reloading
+2025-05-04 00:51:48,664 INFO: * Restarting with stat
+2025-05-04 00:51:51,107 WARNING: * Debugger is active!
+2025-05-04 00:51:51,114 INFO: * Debugger PIN: 312-744-299
+2025-05-04 00:59:07,059 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-04 00:59:07,059 INFO:[33mPress CTRL+C to quit[0m
+2025-05-04 00:59:07,059 INFO: * Restarting with stat
+2025-05-04 00:59:09,488 WARNING: * Debugger is active!
+2025-05-04 00:59:09,488 INFO: * Debugger PIN: 312-744-299
+2025-05-04 01:00:37,786 INFO:127.0.0.1 - - [04/May/2025 01:00:37] "GET /register HTTP/1.1" 200 -
+2025-05-04 01:00:37,833 INFO:127.0.0.1 - - [04/May/2025 01:00:37] "[33mGET /static/styles.css HTTP/1.1[0m" 404 -
+2025-05-04 01:01:14,708 INFO:127.0.0.1 - - [04/May/2025 01:01:14] "GET /register HTTP/1.1" 200 -
+2025-05-04 01:01:14,928 INFO:127.0.0.1 - - [04/May/2025 01:01:14] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-05-04 01:01:27,967 INFO:127.0.0.1 - - [04/May/2025 01:01:27] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-04 01:01:27,984 INFO:127.0.0.1 - - [04/May/2025 01:01:27] "GET /register HTTP/1.1" 200 -
+2025-05-04 01:01:27,999 INFO:127.0.0.1 - - [04/May/2025 01:01:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 01:01:32,010 INFO:127.0.0.1 - - [04/May/2025 01:01:32] "GET /login HTTP/1.1" 200 -
+2025-05-04 01:01:32,041 INFO:127.0.0.1 - - [04/May/2025 01:01:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 01:01:45,427 INFO:127.0.0.1 - - [04/May/2025 01:01:45] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-04 01:01:45,435 INFO:127.0.0.1 - - [04/May/2025 01:01:45] "GET /login HTTP/1.1" 200 -
+2025-05-04 01:01:45,448 INFO:127.0.0.1 - - [04/May/2025 01:01:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 01:03:28,903 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-04 01:03:28,903 INFO:[33mPress CTRL+C to quit[0m
+2025-05-04 01:03:28,903 INFO: * Restarting with stat
+2025-05-04 01:03:31,096 WARNING: * Debugger is active!
+2025-05-04 01:03:31,099 INFO: * Debugger PIN: 312-744-299
+2025-05-04 01:04:08,215 INFO:127.0.0.1 - - [04/May/2025 01:04:08] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-04 01:04:08,230 INFO:127.0.0.1 - - [04/May/2025 01:04:08] "GET /login HTTP/1.1" 200 -
+2025-05-04 01:04:08,568 INFO:127.0.0.1 - - [04/May/2025 01:04:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 01:04:11,833 INFO:127.0.0.1 - - [04/May/2025 01:04:11] "GET /login HTTP/1.1" 200 -
+2025-05-04 01:04:17,455 INFO:127.0.0.1 - - [04/May/2025 01:04:17] "GET /register HTTP/1.1" 200 -
+2025-05-04 01:04:17,485 INFO:127.0.0.1 - - [04/May/2025 01:04:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 01:04:31,873 INFO:127.0.0.1 - - [04/May/2025 01:04:31] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-05-04 01:04:31,939 INFO:127.0.0.1 - - [04/May/2025 01:04:31] "GET /verify_otp HTTP/1.1" 200 -
+2025-05-04 01:04:31,976 INFO:127.0.0.1 - - [04/May/2025 01:04:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 01:05:17,941 INFO:127.0.0.1 - - [04/May/2025 01:05:17] "[32mPOST /verify_otp HTTP/1.1[0m" 302 -
+2025-05-04 01:05:17,953 INFO:127.0.0.1 - - [04/May/2025 01:05:17] "GET /login HTTP/1.1" 200 -
+2025-05-04 01:05:17,986 INFO:127.0.0.1 - - [04/May/2025 01:05:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 01:05:50,694 INFO:127.0.0.1 - - [04/May/2025 01:05:50] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-04 01:05:50,745 INFO:127.0.0.1 - - [04/May/2025 01:05:50] "GET / HTTP/1.1" 200 -
+2025-05-04 01:05:50,775 INFO:127.0.0.1 - - [04/May/2025 01:05:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 01:06:33,078 WARNING:Unauthorized access attempt.
+2025-05-04 01:06:33,097 INFO:127.0.0.1 - - [04/May/2025 01:06:33] "[31m[1mPOST /predict HTTP/1.1[0m" 403 -
+2025-05-04 01:06:33,123 INFO:127.0.0.1 - - [04/May/2025 01:06:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 01:08:04,047 INFO:127.0.0.1 - - [04/May/2025 01:08:04] "GET / HTTP/1.1" 200 -
+2025-05-04 01:08:04,073 INFO:127.0.0.1 - - [04/May/2025 01:08:04] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 01:08:27,377 INFO:127.0.0.1 - - [04/May/2025 01:08:27] "GET /login HTTP/1.1" 200 -
+2025-05-04 01:08:27,417 INFO:127.0.0.1 - - [04/May/2025 01:08:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 01:08:50,338 INFO:127.0.0.1 - - [04/May/2025 01:08:50] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-04 01:08:50,343 INFO:127.0.0.1 - - [04/May/2025 01:08:50] "GET / HTTP/1.1" 200 -
+2025-05-04 01:08:50,368 INFO:127.0.0.1 - - [04/May/2025 01:08:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 02:47:19,437 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-04 02:47:19,439 INFO:[33mPress CTRL+C to quit[0m
+2025-05-04 02:47:19,441 INFO: * Restarting with stat
+2025-05-04 02:47:24,488 WARNING: * Debugger is active!
+2025-05-04 02:47:24,495 INFO: * Debugger PIN: 312-744-299
+2025-05-04 02:47:38,604 INFO:127.0.0.1 - - [04/May/2025 02:47:38] "GET /register HTTP/1.1" 200 -
+2025-05-04 02:47:39,068 INFO:127.0.0.1 - - [04/May/2025 02:47:39] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-05-04 02:47:41,758 INFO:127.0.0.1 - - [04/May/2025 02:47:41] "GET /login HTTP/1.1" 200 -
+2025-05-04 02:47:41,818 INFO:127.0.0.1 - - [04/May/2025 02:47:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 02:47:53,187 INFO:127.0.0.1 - - [04/May/2025 02:47:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-04 02:47:53,202 INFO:127.0.0.1 - - [04/May/2025 02:47:53] "GET / HTTP/1.1" 200 -
+2025-05-04 02:47:53,235 INFO:127.0.0.1 - - [04/May/2025 02:47:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 02:48:26,856 INFO:127.0.0.1 - - [04/May/2025 02:48:26] "POST /predict HTTP/1.1" 200 -
+2025-05-04 02:48:26,894 INFO:127.0.0.1 - - [04/May/2025 02:48:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 02:52:36,247 INFO: * Detected change in 'D:\\Information_Security\\Flight2-3_9\\flight-price-prediction\\app.py', reloading
+2025-05-04 02:52:36,557 INFO: * Restarting with stat
+2025-05-04 02:52:39,341 WARNING: * Debugger is active!
+2025-05-04 02:52:39,352 INFO: * Debugger PIN: 312-744-299
+2025-05-04 02:52:40,767 INFO: * Detected change in 'D:\\Information_Security\\Flight2-3_9\\flight-price-prediction\\app.py', reloading
+2025-05-04 02:52:40,946 INFO: * Restarting with stat
+2025-05-04 02:52:47,292 WARNING: * Debugger is active!
+2025-05-04 02:52:47,299 INFO: * Debugger PIN: 312-744-299
+2025-05-04 03:19:30,005 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-04 03:19:30,005 INFO:[33mPress CTRL+C to quit[0m
+2025-05-04 03:19:30,015 INFO: * Restarting with stat
+2025-05-04 03:19:38,158 WARNING: * Debugger is active!
+2025-05-04 03:19:38,167 INFO: * Debugger PIN: 312-744-299
+2025-05-04 03:20:10,556 INFO:127.0.0.1 - - [04/May/2025 03:20:10] "GET /register HTTP/1.1" 200 -
+2025-05-04 03:20:11,265 INFO:127.0.0.1 - - [04/May/2025 03:20:11] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-05-04 03:20:13,089 INFO:127.0.0.1 - - [04/May/2025 03:20:13] "GET /login HTTP/1.1" 200 -
+2025-05-04 03:20:13,148 INFO:127.0.0.1 - - [04/May/2025 03:20:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 03:20:29,626 INFO:127.0.0.1 - - [04/May/2025 03:20:29] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-04 03:20:29,627 INFO:127.0.0.1 - - [04/May/2025 03:20:29] "GET / HTTP/1.1" 200 -
+2025-05-04 03:20:29,673 INFO:127.0.0.1 - - [04/May/2025 03:20:29] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 03:20:54,107 INFO:127.0.0.1 - - [04/May/2025 03:20:54] "POST /predict HTTP/1.1" 200 -
+2025-05-04 03:20:54,192 INFO:127.0.0.1 - - [04/May/2025 03:20:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 03:25:39,867 INFO: * Detected change in 'D:\\Information_Security\\Flight2-3_9\\flight-price-prediction\\app.py', reloading
+2025-05-04 03:25:40,347 INFO: * Restarting with stat
+2025-05-04 03:25:46,622 WARNING: * Debugger is active!
+2025-05-04 03:25:46,639 INFO: * Debugger PIN: 312-744-299
+2025-05-04 03:25:59,837 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-04 03:25:59,837 INFO:[33mPress CTRL+C to quit[0m
+2025-05-04 03:25:59,837 INFO: * Restarting with stat
+2025-05-04 03:26:04,553 WARNING: * Debugger is active!
+2025-05-04 03:26:04,553 INFO: * Debugger PIN: 312-744-299
+2025-05-04 03:26:28,058 INFO:127.0.0.1 - - [04/May/2025 03:26:28] "GET /login HTTP/1.1" 200 -
+2025-05-04 03:26:38,243 INFO:127.0.0.1 - - [04/May/2025 03:26:38] "GET /register HTTP/1.1" 200 -
+2025-05-04 03:26:38,890 INFO:127.0.0.1 - - [04/May/2025 03:26:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 03:26:40,173 INFO:127.0.0.1 - - [04/May/2025 03:26:40] "GET /login HTTP/1.1" 200 -
+2025-05-04 03:26:40,213 INFO:127.0.0.1 - - [04/May/2025 03:26:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 03:26:57,612 INFO:127.0.0.1 - - [04/May/2025 03:26:57] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-04 03:26:57,625 INFO:127.0.0.1 - - [04/May/2025 03:26:57] "GET / HTTP/1.1" 200 -
+2025-05-04 03:26:57,661 INFO:127.0.0.1 - - [04/May/2025 03:26:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 03:27:30,758 INFO:127.0.0.1 - - [04/May/2025 03:27:30] "POST /predict HTTP/1.1" 200 -
+2025-05-04 03:27:30,843 INFO:127.0.0.1 - - [04/May/2025 03:27:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 03:30:01,058 INFO:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-04 03:30:01,060 INFO:[33mPress CTRL+C to quit[0m
+2025-05-04 03:30:01,061 INFO: * Restarting with stat
+2025-05-04 03:30:06,901 WARNING: * Debugger is active!
+2025-05-04 03:30:06,913 INFO: * Debugger PIN: 312-744-299
+2025-05-04 03:30:20,627 INFO:127.0.0.1 - - [04/May/2025 03:30:20] "GET /login HTTP/1.1" 200 -
+2025-05-04 03:30:21,370 INFO:127.0.0.1 - - [04/May/2025 03:30:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 03:30:33,440 INFO:127.0.0.1 - - [04/May/2025 03:30:33] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-04 03:30:33,453 INFO:127.0.0.1 - - [04/May/2025 03:30:33] "GET / HTTP/1.1" 200 -
+2025-05-04 03:30:33,505 INFO:127.0.0.1 - - [04/May/2025 03:30:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-04 03:30:48,871 INFO:127.0.0.1 - - [04/May/2025 03:30:48] "POST /predict HTTP/1.1" 200 -
+2025-05-04 03:30:48,939 INFO:127.0.0.1 - - [04/May/2025 03:30:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -

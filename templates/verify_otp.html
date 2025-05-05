@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verify Email</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="body-verify">
+    <div class="verify-container">
+        <h2>Verify Email</h2>
+        <form method="POST" action="{{url_for('verify_otp')}}" class="verify-form">
+            <input type="hidden" name="email" value="{{ email }}">
+            <label for="otp">Enter OTP</label>
+            <input type="text" name="otp" id="otp" class="verify-input" required>
+            <button type="submit" class="verify-button">Verify</button>
+        </form>
+    </div>
+</body>
+</html>
