@@ -3,6 +3,120 @@
 <head>
   <title>Login</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <style>
+    body.login-body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #80deea);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 420px;
+      text-align: left;
+    }
+
+    h2 {
+      text-align: center;
+      color: #0077b6;
+      margin-bottom: 25px;
+      font-size: 28px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #444;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: border 0.3s, box-shadow 0.3s;
+    }
+
+    input:focus {
+      border-color: #00b4d8;
+      box-shadow: 0 0 5px rgba(0, 180, 216, 0.4);
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(to right, #0077b6, #00b4d8);
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #005f8e, #0097c9);
+    }
+
+    .link-text {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .link-text a {
+      color: #0077b6;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .link-text a:hover {
+      text-decoration: underline;
+    }
+
+    /* Flash messages */
+    .flash-message {
+      margin-top: 20px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .flash-success {
+      color: #155724;
+      background-color: #d4edda;
+      border: 1px solid #c3e6cb;
+    }
+
+    .flash-danger {
+      color: #721c24;
+      background-color: #f8d7da;
+      border: 1px solid #f5c6cb;
+    }
+
+    .flash-info {
+      color: #004085;
+      background-color: #cce5ff;
+      border: 1px solid #b8daff;
+    }
+  </style>
 </head>
 <body class="login-body">
 
@@ -22,15 +136,10 @@
       {% if messages %}
         <div style="margin-top: 20px;">
           {% for category, message in messages %}
-            <div style="
-              padding: 12px;
-              margin-bottom: 12px;
-              border-radius: 6px;
-              color: {% if category == 'success' %}#155724{% elif category == 'danger' %}#721c24{% else %}#004085{% endif %};
-              background-color: {% if category == 'success' %}#d4edda{% elif category == 'danger' %}#f8d7da{% else %}#cce5ff{% endif %};
-              border: 1px solid {% if category == 'success' %}#c3e6cb{% elif category == 'danger' %}#f5c6cb{% else %}#b8daff{% endif %};
-              text-align: center;
-            ">
+            <div class="flash-message 
+              {% if category == 'success' %}flash-success
+              {% elif category == 'danger' %}flash-danger
+              {% else %}flash-info{% endif %}">
               {{ message }}
             </div>
           {% endfor %}

@@ -1,8 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unauthorized Access</title>
+
+    <!-- External CSS -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <style>
+        /* Global Styles */
+        body.unauthorized-body {
+            background: linear-gradient(135deg, #00bcd4, #1de9b6); /* Teal and Light Green Gradient */
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Unauthorized Container */
+        .unauthorized-container {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 40px 60px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #e0f7fa; /* Light Cyan */
+        }
+
+        .btn {
+            padding: 12px 30px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #ff5722; /* Orange */
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #d84315; /* Darker Orange */
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+    </style>
 </head>
 <body class="unauthorized-body">
     <div class="unauthorized-container">

@@ -12,13 +12,155 @@
       crossorigin="anonymous"
     />
 
-    <!-- css -->
-    <link rel="stylesheet" href="static/css/styles.css" />
+    <style>
+      /* Global Styles */
+      body {
+        background: linear-gradient(135deg, #00bcd4, #0288d1);
+        color: #fff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Navbar */
+      .navbar {
+        background-color: #0288d1;
+        padding: 15px;
+      }
+
+      .navbar a.navbar-brand {
+        font-size: 24px;
+        font-weight: 700;
+        color: #ffffff;
+      }
+
+      .navbar .navbar-nav .nav-item .btn {
+        background-color: #ff5722;
+        border: none;
+        padding: 8px 15px;
+        margin-top: 3px;
+        border-radius: 4px;
+        transition: background 0.3s;
+      }
+
+      .navbar .navbar-nav .nav-item .btn:hover {
+        background-color: #f44336;
+      }
+
+      /* Form Styling */
+      .container {
+        margin-top: 50px;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      }
+
+      .form-container h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 30px;
+        color: #fff;
+        font-weight: 600;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        margin-bottom: 15px;
+        border-radius: 12px;
+      }
+
+      .card-body {
+        padding: 20px;
+      }
+
+      .card-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+
+      input[type="datetime-local"],
+      select {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+
+      input[type="datetime-local"]:focus,
+      select:focus {
+        outline: none;
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        padding: 14px;
+        background-color: #ff5722;
+        border: none;
+        border-radius: 8px;
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #f44336;
+      }
+
+      .prediction-text {
+        font-size: 22px;
+        color: #00bcd4;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #0288d1;
+        color: #fff;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        margin-top: 50px;
+      }
+
+      .footer-wrapper {
+        padding-top: 15px;
+      }
+
+      /* Dropdown Styling */
+      select {
+        background-color: #333;
+        color: #fff;
+        border: 1px solid #444;
+      }
+
+      select option {
+        background-color: #0288d1;
+        color: #fff;
+      }
+
+      select:focus {
+        background-color: #ff5722;
+        border-color: #ff5722;
+      }
+    </style>
   </head>
 
   <body>
     <!-- As a heading -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
       <a class="navbar-brand" href="/home">Flight Price Predictor</a>
       <button
         class="navbar-toggler"
@@ -35,9 +177,9 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <span class="navbar-text text-white mr-3"
-              >Logged in as: {{ email }}</span
-            >
+            <span class="navbar-text text-white mr-3">
+              Logged in as: {{ email }}
+            </span>
           </li>
           <li class="nav-item">
             <a href="/logout" class="btn btn-outline-light">Logout</a>
@@ -46,9 +188,8 @@
       </div>
     </nav>
 
-    <br /><br /><br />
-
     <div class="container">
+      <h2>Flight Price Prediction</h2>
       <form action="/predict" method="post">
         <!-- 🔒 Hidden input for token -->
         <input type="hidden" name="token" value="{{ token }}" />
@@ -57,46 +198,26 @@
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Date of Departure</h5>
-                <!-- Departure -->
-                <input
-                  type="datetime-local"
-                  name="Dep_Time"
-                  id="Dep_Time"
-                  required="required"
-                />
+                <input type="datetime-local" name="Dep_Time" id="Dep_Time" required />
               </div>
             </div>
           </div>
-          <br />
-          <br />
-          <br />
           <div class="col-sm-6">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Date of Arrival</h5>
-                <!-- Arrival -->
-                <input
-                  type="datetime-local"
-                  name="Arrival_Time"
-                  id="Arrival_Time"
-                  required="required"
-                />
+                <input type="datetime-local" name="Arrival_Time" id="Arrival_Time" required />
               </div>
             </div>
           </div>
         </div>
 
-        <br />
-        <br />
-        <br />
-
         <div class="row">
           <div class="col-sm-6">
             <div class="card">
               <div class="card-body">
-                <!-- Source -->
                 <h5 class="card-title">Travelling from (Source)</h5>
-                <select name="Source" id="Source" required="required">
+                <select name="Source" id="Source" required>
                   <option value="Delhi">Delhi</option>
                   <option value="Kolkata">Kolkata</option>
                   <option value="Mumbai">Mumbai</option>
@@ -109,8 +230,7 @@
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Travelling To (Destination)</h5>
-                <!-- Destination -->
-                <select name="Destination" id="Destination" required="required">
+                <select name="Destination" id="Destination" required>
                   <option value="Cochin">Cochin</option>
                   <option value="Delhi">Delhi</option>
                   <option value="Hyderabad">Hyderabad</option>
@@ -121,17 +241,12 @@
           </div>
         </div>
 
-        <br />
-        <br />
-        <br />
-
         <div class="row">
           <div class="col-sm-6">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">No. of Stops</h5>
-                <!-- Total Stops -->
-                <select name="stops" required="required">
+                <select name="stops" required>
                   <option value="0">Non-Stop</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -145,8 +260,7 @@
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Preferred Airline</h5>
-                <!-- Airline -->
-                <select name="airline" id="airline" required="required">
+                <select name="airline" id="airline" required>
                   <option value="Jet Airways">Jet Airways</option>
                   <option value="IndiGo">IndiGo</option>
                   <option value="Air India">Air India</option>
@@ -155,15 +269,9 @@
                   <option value="Vistara">Vistara</option>
                   <option value="Air Asia">Air Asia</option>
                   <option value="GoAir">GoAir</option>
-                  <option value="Multiple carriers Premium economy">
-                    Multiple carriers Premium economy
-                  </option>
-                  <option value="Jet Airways Business">
-                    Jet Airways Business
-                  </option>
-                  <option value="Vistara Premium economy">
-                    Vistara Premium economy
-                  </option>
+                  <option value="Multiple carriers Premium economy">Multiple carriers Premium economy</option>
+                  <option value="Jet Airways Business">Jet Airways Business</option>
+                  <option value="Vistara Premium economy">Vistara Premium economy</option>
                   <option value="Trujet">Trujet</option>
                 </select>
               </div>
@@ -171,21 +279,13 @@
           </div>
         </div>
 
-        <br />
-        <br />
-        <br />
-        <!-- Submit -->
-        <input type="submit" value="Perdict Price" class="btn btn-secondary" />
+        <input type="submit" value="Predict Price" class="btn btn-secondary" />
       </form>
 
-      <br />
-      <br />
-      <h3>{{ prediction_text }}</h3>
-
-      <br />
-      <br />
-      <p>©2025 MudAs AI</p>
+      <div class="prediction-text">{{ prediction_text }}</div>
     </div>
+
+    <footer class="footer-wrapper">©2025 MudAs AI</footer>
 
     <!-- JavaScript -->
     <script

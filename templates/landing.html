@@ -1,34 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Welcome to Flight Price Predictor</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <style>
-        body {
-            background-image: url('https://wallpaperaccess.com/full/193328.jpg');
-            background-size: cover;
-            height: 100vh;
-            color: white;
-            display: flex;
-        }
-        .centered {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-        .btn-custom {
-            padding: 12px 30px;
-            font-size: 22px;
-        }
-    </style>
+  <title>Welcome to Flight Price Predictor</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url('https://wallpaperaccess.com/full/193328.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+    }
+
+    /* Dark overlay for readability */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .centered {
+      position: relative;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 40px;
+      font-weight: 700;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .btn-custom {
+      padding: 14px 32px;
+      font-size: 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-register {
+      background: linear-gradient(135deg, #ff6a00, #ee0979);
+      border: none;
+      color: white;
+    }
+
+    .btn-register:hover {
+      background: linear-gradient(135deg, #ee0979, #ff6a00);
+      transform: scale(1.05);
+    }
+
+    .btn-login {
+      background: linear-gradient(135deg, #00c9ff, #92fe9d);
+      border: none;
+      color: #000;
+    }
+
+    .btn-login:hover {
+      background: linear-gradient(135deg, #92fe9d, #00c9ff);
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 576px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      .btn-custom {
+        font-size: 18px;
+        padding: 12px 24px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="centered">
-        <h1 class="mb-4">Welcome to Flight Price Predictor</h1>
-        <a href="{{ url_for('register') }}" class="btn btn-primary btn-custom m-2">Register</a>
-        <a href="{{ url_for('login') }}" class="btn btn-success btn-custom m-2">Sign In</a>
-    </div>
+  <div class="centered">
+    <h1>Welcome to Flight Price Predictor</h1>
+    <a href="{{ url_for('register') }}" class="btn btn-custom btn-register m-2">Register</a>
+    <a href="{{ url_for('login') }}" class="btn btn-custom btn-login m-2">Sign In</a>
+  </div>
 </body>
 </html>
